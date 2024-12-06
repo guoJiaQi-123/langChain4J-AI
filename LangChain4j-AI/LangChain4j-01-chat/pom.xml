@@ -7,7 +7,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>LangChain4j-chat</artifactId>
+    <artifactId>LangChain4j-01-chat</artifactId>
     <packaging>jar</packaging>
 
     <name>LangChain4j-chat</name>
