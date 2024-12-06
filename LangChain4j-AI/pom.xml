@@ -10,7 +10,8 @@
     <name>LangChain4j-AI</name>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>LangChain4j-chat</module>
+        <module>LangChain4j-01-chat</module>
+        <module>LangChain4j-02-LLMConfig</module>
     </modules>
 
     <properties>
