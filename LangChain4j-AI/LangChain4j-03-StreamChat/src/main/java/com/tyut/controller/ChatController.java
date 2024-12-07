@@ -21,13 +21,9 @@ public class ChatController {
     @Autowired
     private IServiceAssistant iServiceAssistant;
 
-
-
-    @GetMapping("/assistant")
-    public Flux<String> chat2(String message) {
+    @GetMapping("/stream")
+    public Flux<String> chat(String message) {
         return iServiceAssistant.chat(message);
     }
-
-
 }
 

@@ -19,22 +19,6 @@ import java.time.Duration;
 @Configuration
 public class LLMConfig {
 
-
-    /**
-     * 提供模型源信息
-     * @return
-     */
-    @Bean
-    public ChatLanguageModel getChatLanguageModel() {
-        return OpenAiChatModel.builder()
-                .apiKey("sk-2013c20522404d77ad7492cf3a48c5b1") // 密钥
-                .logRequests(true) // 开启日志
-                .logResponses(true)
-                .modelName("qwen-max")  // 模型名称
-                .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
-                .build();
-    }
-
     /**
      * 提供模型源信息 >> 流式输出
      * @return
@@ -50,13 +34,14 @@ public class LLMConfig {
                 .build();
     }
 
+    /**
+     * 提供流式输出功能的AI服务
+     * @return
+     */
     @Bean
     public IServiceAssistant getIServiceAssistant() {
         return AiServices.builder(IServiceAssistant.class)
                 .streamingChatLanguageModel(streamingChatLanguageModel())
                 .build();
     }
-
-
-
 }
