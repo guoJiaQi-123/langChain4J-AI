@@ -23,5 +23,4 @@ public class ChatController {
         String generate = chatLanguageModel.generate(message);
         return generate;
     }
-
 }
