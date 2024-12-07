@@ -6,7 +6,5 @@ package com.tyut.service;
  * @author OldGj 2024/12/6
  */
 public interface IServiceAssistant {
-
-
     String chat(String message);
 }

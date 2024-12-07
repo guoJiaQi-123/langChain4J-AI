@@ -31,8 +31,13 @@ public class LLMConfig {
                 .build();
     }
 
+    /**
+     * 不同AI服务与模型的解耦
+     * @return AI服务
+     */
     @Bean
     public IServiceAssistant getIServiceAssistant() {
+        // 解读:IServiceAssistant这个AI服务类使用的大模型是 >> getChatLanguageModel()这个方法返回的大模型
         return AiServices.builder(IServiceAssistant.class)
                 .chatLanguageModel(getChatLanguageModel())
                 .build();
